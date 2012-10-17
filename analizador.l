@@ -14,6 +14,7 @@ ignora " "|\t|\n
 operarit *|+|-|/
 %%
 {palabrasClave}+	    {printf("PALABRARESERVADA\n");}
+{identificador}
 {identificador}{latinoM}({entero}+{latinom}*)|{identificador}{latinoM}({latinom}+{entero}*)	{printf("IDENTIFICADOR\n");}	
 {latinoM}+|{latinoM}+{entero}+|{identificador}{latinoM}+({latinom}*)({entero}*)|{identificador}({entero}*)({latinoM}+{latinom}*)|({latinoM}+{latinom}*)|{entero}+({latinoM}+{entero}*)|{identificador}{entero}+ {printf("ERROR LEXICO\n");}	
 {entero}+                   {printf("ENTERO\n");}
